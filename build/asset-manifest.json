@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2324ca1f.css",
+    "main.js": "/static/js/main.c5cb0624.js",
+    "static/media/tableBackground.png": "/static/media/tableBackground.23dd1587e8d815e50ecf.png",
+    "static/media/_blowing_kiss[window]4x.gif": "/static/media/_blowing_kiss[window]4x.2ad33b91b97edca96e7a.gif",
+    "static/media/_laughing_devil[window]4x.gif": "/static/media/_laughing_devil[window]4x.c54c277f0b55b5b89c2a.gif",
+    "static/media/bet10.png": "/static/media/bet10.4dccf18564f631cc621d.png",
+    "static/media/bet20.png": "/static/media/bet20.9c7f4fb0872a86983a84.png",
+    "static/media/bet100.png": "/static/media/bet100.9630bc1e0ede5270f3c9.png",
+    "static/media/bet500.png": "/static/media/bet500.50c83b8ea08a0dc324fe.png",
+    "static/media/bet1000.png": "/static/media/bet1000.0fe416c0992a043401f2.png",
+    "static/media/bet50.png": "/static/media/bet50.ece6953d1883b94a81c9.png",
+    "static/media/background.jpg": "/static/media/background.7eed3600dc9b47ce4840.jpg",
+    "static/media/double.png": "/static/media/double.45873dcd233fbb78bb06.png",
+    "static/media/Balance3.png": "/static/media/Balance3.86692ef9619098ed5c21.png",
+    "static/media/stand.png": "/static/media/stand.268ce5324d882a7d3da7.png",
+    "static/media/hit.png": "/static/media/hit.f579ae62f259e6948444.png",
+    "index.html": "/index.html",
+    "main.2324ca1f.css.map": "/static/css/main.2324ca1f.css.map",
+    "main.c5cb0624.js.map": "/static/js/main.c5cb0624.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2324ca1f.css",
+    "static/js/main.c5cb0624.js"
+  ]
+}
