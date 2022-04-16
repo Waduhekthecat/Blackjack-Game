@@ -1,0 +1,24 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow: hidden;
+  font-family: "Open Sans", sans-serif;
+  width: 100vw;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-image: url("/home/josh/projects/llth-blackjack/blackjack/src/imgs/background.jpg");
+  background-size: 38%;
+  background-repeat: repeat;
+  background-position: center;
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+}
