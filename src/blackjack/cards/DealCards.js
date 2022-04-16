@@ -17,6 +17,8 @@ const DealCards = (
 
 export default DealCards;
 
+// STYLED COMPONENTS //
+
 const StartRound = styledCom.div`
 display:flex;
 justify-content:center;

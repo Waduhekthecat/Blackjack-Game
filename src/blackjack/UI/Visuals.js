@@ -3,6 +3,7 @@ import Displays from "./Displays.js";
 import LeaveTable from "./Leave.js";
 import Bet from "./Bet.js";
 import Table from "../../imgs/tableBackground.png";
+import deck from "../../imgs/dealer_deck.png";
 
 const Visuals = (
   {balance, betSize, gameState, GameState, handleClear, handleMax, handleClick}
@@ -19,9 +20,9 @@ const Visuals = (
           <Bet
             gameState={gameState}
             GameState={GameState}
-            handleClick={handleClick}
-            handleClear={handleClear}
-            handleMax={handleMax}
+              handleClick={handleClick}
+              handleClear={handleClear}
+              handleMax={handleMax}
             />
         <LeaveTable/>
       </>
@@ -30,24 +31,26 @@ const Visuals = (
 
 export default Visuals;
 
-// const Deck = styledCom.img`
-// position:absolute;
-// z-index:10;
-// width:120px;
-// margin-top: 1%;
-// margin-left:150px;
-// margin-right:-120px;
-// @media (max-width: 1200px) {
-//   transform:scale(.75)
-// }
-// @media (max-width: 800px) {
-//   transform:scale(.55)
-// }
-// @media (max-width: 600px) {
-//   transform:scale(.45)
-//   margin-left:100px;
-// }
-// `;
+const Deck = styledCom.img.attrs({
+  src:deck
+})`
+position:absolute;
+z-index:10;
+width:120px;
+margin-top: 1%;
+margin-left:150px;
+margin-right:-120px;
+@media (max-width: 1200px) {
+  transform:scale(.75)
+}
+@media (max-width: 800px) {
+  transform:scale(.55)
+}
+@media (max-width: 600px) {
+  transform:scale(.45)
+  margin-left:100px;
+}
+`;
 
 const BlackjackTable = styledCom.img.attrs({
   src: Table, alt:""

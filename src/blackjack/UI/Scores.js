@@ -15,6 +15,8 @@ const Scores = ({gameState, GameState, dealerScore, playerScore}) => {
 }
 export default Scores;
 
+// STYLED COMPONENTS //
+
 const Score = styledCom.h2`
   color: white; 
   background-color: #111111; 

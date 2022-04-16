@@ -24,6 +24,8 @@ const Bet = ({gameState, GameState, handleClear, handleMax, handleClick}) => {
 
 export default Bet;
 
+// STYLED COMPONENTS //
+
 const Bet10 = styledCom.input.attrs({
   type:"image", src: bet10, alt:"10", value:10 
 })`

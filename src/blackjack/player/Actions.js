@@ -18,9 +18,6 @@ const ActionBtns = ({game, handleStand, handleHit}) => {
             onClick={handleHit}
             />
           </Action>
-          <Action>
-            <Double/>
-          </Action>
         </>
       );
     }
@@ -28,6 +25,7 @@ const ActionBtns = ({game, handleStand, handleHit}) => {
 
   export default ActionBtns;
 
+  // STYLED COMPONENTS //
 
 const Action = styledCom(Grid).attrs({
     item: true,
@@ -48,11 +46,15 @@ const Action = styledCom(Grid).attrs({
     border: none;
     cursor: pointer;
       &:hover {
-        transform: scale(1.028);
+        transform: scale(.9);
       }
       &:active {
-        transform: scale(1);
-      }`;
+        transform: scale(.85);
+      }
+      @media (max-width: 1450px) {
+        transform:scale(.85)
+    }
+      `;
 
   const Stand = styledCom.input.attrs({
     type:"image", src: stand
@@ -66,26 +68,29 @@ const Action = styledCom(Grid).attrs({
     border: none;
     cursor: pointer;
       &:hover {
-        transform: scale(1.028);
+        transform: scale(.9);
       }
       &:active {
-        transform: scale(1);
-      }`;
+        transform: scale(.85);
+      }
+      @media (max-width: 1450px) {
+        transform:scale(.85)
+    }`;
 
-  const Double = styledCom.input.attrs({
-    type:"image", src: double
-  })`
-    position: relative;
-    font-size: 58px;
-    background-color: rgba(0, 0, 0, 0);
-    width: 150px;
-    height: 120px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-      &:hover {
-        transform: scale(1.028);
-      }
-      &:active {
-        transform: scale(1);
-      }`; 
+  // const Double = styledCom.input.attrs({
+  //   type:"image", src: double
+  // })`
+  //   position: relative;
+  //   font-size: 58px;
+  //   background-color: rgba(0, 0, 0, 0);
+  //   width: 150px;
+  //   height: 120px;
+  //   outline: none;
+  //   border: none;
+  //   cursor: pointer;
+  //     &:hover {
+  //       transform: scale(1.028);
+  //     }
+  //     &:active {
+  //       transform: scale(1);
+  //     }`; 

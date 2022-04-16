@@ -25,7 +25,7 @@ const Displays = ({balance, betSize}) => {
 
 export default Displays;
 
-
+// STYLED COMPONENTS //
 
 const Balance = styledCom.img.attrs({
     src:balanceDisplay, alt:"balance"

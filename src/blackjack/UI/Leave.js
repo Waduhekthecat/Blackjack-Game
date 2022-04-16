@@ -21,6 +21,8 @@ const LeaveTable = () => {
 
 export default LeaveTable;
 
+// STYLED COMPONENTS //
+
 const LeaveBtn = styledCom.button`
     background: transparent;
     position: absolute;

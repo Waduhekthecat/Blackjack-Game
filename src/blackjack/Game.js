@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Grid } from "@mui/material/";
 import styledCom from 'styled-components';
-
 import Deck from "./cards/Deck.js";
 import Card from "./cards/RenderCard.js";
 import DealCards from "./cards/DealCards.js";
@@ -37,16 +36,19 @@ const Game = () => {
 
   const [gameState, setGameState] = useState(GameState.bet);
   const [game, setGame] = useState("placeBets");  
-  const [balance, setBalance] = useState(5000);
-  const [betSize, setBetSize] = useState(0);
   const [deck, setDeck] = useState(Deck);
-  const [hiddenCard, setHiddenCard] = useState([]);
+ 
   const [dealerHand, setDealerHand] = useState([]);
   const [dealerScore, setDealerScore] = useState(0);
+  const [dealerCount, setDealerCount] = useState(0);
+  const [hiddenCard, setHiddenCard] = useState([]);
+
   const [playerHand, setPlayerHand] = useState([]);
   const [playerScore, setPlayerScore] = useState(0);
-  const [dealerCount, setDealerCount] = useState(0);
   const [playerCount, setPlayerCount] = useState(0);
+
+  const [balance, setBalance] = useState(5000);
+  const [betSize, setBetSize] = useState(0);
   const [message, setMessage] = useState("");
   const [animation, setAnimation] = useState("");
 
@@ -235,6 +237,7 @@ const shuffle = () => {
     })
     setScore(total);
   };
+
   // Player actions
   const handleHit = () => {
     drawCard(Deal.player)
@@ -258,7 +261,7 @@ const shuffle = () => {
     setGame(Results.push);
   };
 }
-  // Resets game state
+  // Reset game state
   const reset = () => {
     setHiddenCard([]);
     setPlayerHand([]);
@@ -273,17 +276,7 @@ const shuffle = () => {
     setGame("placeBets");
     setGameState(GameState.bet)
     };
-  
-    // console.table('Dealer: ', dealerHand)
-    // console.table('Player: ', playerHand)
-    // console.log('dealerScore: ', dealerScore)
-    // console.log('playerScore: ', playerScore)
-    // console.log('dealerCount: ', dealerCount)
-    // console.log('playerCount: ', playerCount)
-    // console.log('Game results: ', game)
-    // console.log('Game State: ', gameState)
 
-    console.log(gameState)
   return (
     <Container>
       <DealerTitle>DEALER</DealerTitle>
@@ -291,11 +284,11 @@ const shuffle = () => {
         <DealerUl>
           {hiddenCard.map(card =>
             <DealerLi key={card}>
-              <Card card={card} back={true} height="150px"/>
+              <Card card={card} back={true}/>
             </DealerLi>)}
           {dealerHand.map(card =>
             <DealerLi key={card}>
-              <Card card={card} height="150px"/>
+              <Card card={card}/>
             </DealerLi>)}
         </DealerUl>
       </DealerHand>
@@ -321,7 +314,7 @@ const shuffle = () => {
         <PlayerUl>
           {playerHand.map(card => 
             <PlayerLi key={card}>
-              <Card card={card} height="150px"/>
+              <Card card={card}/>
             </PlayerLi>)}
         </PlayerUl>
       </PlayerHand>
@@ -351,12 +344,13 @@ const shuffle = () => {
 
 export default Game;
 
+// STYLED COMPONENTS //
+
 const Message = styledCom.div`
 position:absolute;
 bottom:15%;
 color:white;
 `;
-
 const Animation = styledCom.div`
 position:absolute;
 bottom:35%;
@@ -690,11 +684,29 @@ top: 10%;
 
 const DealerUl = styledCom.ul`
 list-style: none;
+@media (max-width: 1450px) {
+  margin: 0 0 0 40px;
+}
+@media (max-height: 1000px) {
+  margin: 0 0 0 60px;
+}
+@media (max-height: 800px) {
+  margin: 0 0 0 100px;
+}
 `;
 
 const DealerLi = styledCom.li`
 display: inline-block;
-margin: 0 0 0 -20px;
+margin: 0 0 0 -40px;
+@media (max-width: 1450px) {
+  margin: 0 0 0 -40px;
+}
+@media (max-height: 1000px) {
+  margin: 0 0 0 -80px;
+}
+@media (max-height: 800px) {
+  margin: 0 0 0 -120px;
+}
 `;
 
 // Styled Player Components
@@ -710,11 +722,29 @@ bottom: 30%;
 
 const PlayerUl = styledCom.ul`
 list-style: none;
+@media (max-width: 1450px) {
+  margin: 0 0 0 40px;
+}
+@media (max-height: 1000px) {
+  margin: 0 0 0 60px;
+}
+@media (max-height: 800px) {
+  margin: 0 0 0 100px;
+}
 `;
 
 const PlayerLi = styledCom.li`
 display: inline-block;
-margin: 0 0 0 -20px;
+margin: 0 0 0 -40px;
+@media (max-width: 1450px) {
+  margin: 0 0 0 -40px;
+}
+@media (max-height: 1000px) {
+  margin: 0 0 0 -80px;
+}
+@media (max-height: 800px) {
+  margin: 0 0 0 -120px;
+}
 `;
 
 const Container = styledCom.div`
