@@ -74,12 +74,12 @@ const Game = () => {
       if (playerCount === 2 &&  playerScore === 21 && dealerScore !==21){
         setMessage("Blackjack!")
         setAnimation(Win);
-        setTimeout(() => reset(), [3500])
+        setTimeout(() => reset(), [4000])
 
       };
       if (playerScore > 21) {
         setGame(Results.playerBusts)
-        setTimeout(() => reset(), [3500])
+        setTimeout(() => reset(), [4000])
 
       };
   }, [playerCount]);
@@ -95,7 +95,7 @@ const Game = () => {
         }
         else {
           setTimeout(()=>
-          drawCard(Deal.dealer), [300])
+          drawCard(Deal.dealer), [500])
         }
       }
     }, [dealerCount]);
@@ -104,31 +104,31 @@ const Game = () => {
   useEffect(() => {
     if (game === Results.blackjack) {
     setTimeout(()=>setBalance(Math.round((balance + (betSize * 2.5)) * 100) / 100), [3500])
-    setTimeout(()=>setMessage("Blackjack!"), [500])
-    setTimeout(()=>setAnimation(Win), [500])
-      setTimeout(()=> reset(), [3500]);
+    setTimeout(()=>setMessage("Blackjack!"), [1000])
+    setTimeout(()=>setAnimation(Win), [1000])
+      setTimeout(()=> reset(), [4000]);
   } else if (game === Results.playerBusts) {
-    setTimeout(()=>setMessage("Player Busted!"), [500])
-    setTimeout(()=>setAnimation(Lose), [500])
-      setTimeout(()=> reset(), [3500]);
+    setTimeout(()=>setMessage("Player Busted!"), [1000])
+    setTimeout(()=>setAnimation(Lose), [1000])
+      setTimeout(()=> reset(), [4000]);
   } else if (game === Results.dealerBusts) {
-    setTimeout(()=>setBalance(Math.round((balance + (betSize * 2)) * 100) / 100), [3500])
-    setTimeout(()=>setMessage("Dealer Busted!"), [500])
-    setTimeout(()=>setAnimation(Win), [500])
-      setTimeout(()=> reset(), [3500]);
+    setTimeout(()=>setBalance(Math.round((balance + (betSize * 2)) * 100) / 100), [4000])
+    setTimeout(()=>setMessage("Dealer Busted!"), [1000])
+    setTimeout(()=>setAnimation(Win), [1000])
+      setTimeout(()=> reset(), [4000]);
   } else if (game === Results.playerWins) {
-    setTimeout(()=>setBalance(Math.round((balance + (betSize * 2)) * 100) / 100), [3500])
-    setTimeout(()=>setMessage("Player Wins!"), [500])
-    setTimeout(()=>setAnimation(Win), [500])
-      setTimeout(()=> reset(), [3500]);
+    setTimeout(()=>setBalance(Math.round((balance + (betSize * 2)) * 100) / 100), [4000])
+    setTimeout(()=>setMessage("Player Wins!"), [1000])
+    setTimeout(()=>setAnimation(Win), [1000])
+      setTimeout(()=> reset(), [4000]);
   } else if (game === Results.dealerWins) {
-    setTimeout(()=>setMessage("Dealer Wins!"), [500])
-    setTimeout(()=>setAnimation(Lose), [500])
-      setTimeout(()=> reset(), [3500]);
+    setTimeout(()=>setMessage("Dealer Wins!"), [1000])
+    setTimeout(()=>setAnimation(Lose), [1000])
+      setTimeout(()=> reset(), [4000]);
   } else if (game === Results.push) {
-    setTimeout(()=>setBalance(Math.round((balance + (betSize * 1)) * 100) / 100), [3500])
-    setTimeout(()=>setMessage("Push!"), [500])
-      setTimeout(()=> reset(), [3500]);
+    setTimeout(()=>setBalance(Math.round((balance + (betSize * 1)) * 100) / 100), [4000])
+    setTimeout(()=>setMessage("Push!"), [1000])
+      setTimeout(()=> reset(), [4000]);
     }
 }, [game]);
   
