@@ -1,11 +1,10 @@
 import './index.css';
 import Game from './blackjack/Game.js';
+import background from './imgs/background.jpg';
 
 function App() {
   return (
-      <>
         <Game/>     
-      </>
   );
 }
 
